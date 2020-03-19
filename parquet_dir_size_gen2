@@ -1,0 +1,8 @@
+# Calculate size of director containing bunch of parquet files
+
+from pyspark.sql.functions import sum as _sum
+def dir_size(test):
+  s = 0
+  for i in test:
+    s=s+i.size
+  return(s)
